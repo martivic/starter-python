@@ -31,7 +31,7 @@ def message():
     # Send a text message to the number provided
     message = client.sms.messages.create(to=request.form['to'],
                                          from_=TWILIO_NUMBER,
-                                         body='Good luck on your Twilio quest!')
+                                         body='Have fun with your Twilio development!')
 
     # Return a message indicating the text message is enroute
     return 'Message on the way!'
@@ -42,7 +42,7 @@ def message():
 def call():
     # Make an outbound call to the provided number from your Twilio number
     call = client.calls.create(to=request.form['to'], from_=TWILIO_NUMBER, 
-                               url='http://twimlets.com/message?Message%5B0%5D=http://demo.kevinwhinnery.com/audio/zelda.mp3')
+                               url='http://twilio-elearning.herokuapp.com/starter/voice.php')
 
     # Return a message indicating the call is coming
     return 'Call inbound!'
@@ -52,7 +52,7 @@ def call():
 def hello():
     response = twiml.Response()
     response.say('Hello there! You have successfully configured a web hook.')
-    response.say('Good luck on your Twilio quest!', voice='woman')
+    response.say('Have fun with your Twilio development!', voice='woman')
     return Response(str(response), mimetype='text/xml')
 
 if __name__ == '__main__':
