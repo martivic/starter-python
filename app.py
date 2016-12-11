@@ -8,13 +8,13 @@ from twilio import twiml
 from twilio.rest import TwilioRestClient
 
 # Pull in configuration from system environment variables
-TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
-TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
-TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
+TWILIO_ACCOUNT_SID = os.environ.get('AC91dab071e04eca8ca22104c5062f5a9f')
+TWILIO_AUTH_TOKEN = os.environ.get('9b2228fcd0cd55649472fbfa85106c42')
+TWILIO_NUMBER = os.environ.get('+16172497675')
 
 # create an authenticated client that can make requests to Twilio for your
 # account.
-client = TwilioRestClient(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+client = TwilioRestClient(AC91dab071e04eca8ca22104c5062f5a9f, 9b2228fcd0cd55649472fbfa85106c42)
 
 # Create a Flask web app
 app = Flask(__name__)
